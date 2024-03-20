@@ -198,3 +198,14 @@ for (let i = 0; i < exampleArray.length; i++) {
 }
 
 console.log(exampleArray);
+
+//! -------------- como saber el tipo de dato  ---------------
+const priceOne = 100000;
+const alumno = {
+  name: "luismi",
+  age: 22,
+}; // object
+
+function example() {}
+
+console.log(typeof example); // nos dice el tipo de dato en este caso number
