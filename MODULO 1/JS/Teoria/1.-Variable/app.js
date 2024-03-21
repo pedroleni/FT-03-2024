@@ -49,6 +49,8 @@ const funcionFlecha = () => {
   //pi = "LJKDSFJGHFG"; ---> da error porque es una constante de un primitivo (number, undefined, null, boolean, string) que no se puede cambiar
 };
 
+// name = "pedro"
+
 funcionFlecha();
 console.log("name fuera", name);
 
