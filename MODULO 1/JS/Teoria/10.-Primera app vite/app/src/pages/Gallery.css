@@ -1,0 +1,9 @@
+#containerGalleryPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0rem 3rem 0rem;
+    
+}
