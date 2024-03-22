@@ -1,0 +1,15 @@
+
+.inputBlack {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.inputBlack {
+    color: aqua;
+}
+
+
+/* En cascada hace caso a lo ultimo que tenemos en el css */
+.probandoClases {
+    color: brown;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Datos personales:</legend>
+        <div class="inputUserName input-userName">
+          <div>
+            <!-- Label importante para la accesibilidad de la pagina -->
+            <label for="userName">Username: </label>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="name"
+              maxlength="10"
+              minlength="2"
+              required
+              class="inputBlack probandoClases"
+            />
+          </div>
+        </div>
+
+        <div class="inputPassword">
+          <div>
+            <label for="password">Password:</label>
+          </div>
+          <div>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div>
+            <button type="button" id="changeVisibility">VER</button>
+          </div>
+        </div>
+      </fieldset>
+      <div>
+        <input
+          type="number"
+          name="number"
+          id="inputNumber"
+          class="inputBlack"
+        />
+        <input type="range" name="" id="" step="10" />
+        <input type="date" name="" id="" />
+        <input type="datetime-local" name="" id="" />
+        <input type="week" name="" id="" />
+        <input type="checkbox" name="" id="inputCheckbox" />
+        <input type="radio" name="" id="" />
+      </div>
+      <select name="select" id="select">
+        <option value="Madrid">Madrid</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Malaga">Malaga</option>
+      </select>
+
+      <select name="grupoOpciones" id="grupoOpciones">
+        <optgroup label="superheroes">
+          <option value="Superheroe Bueno">Batman</option>
+          <option value="Thor">Thor</option>
+          <option value="Batman">Batman</option>
+        </optgroup>
+        <optgroup label="villanos">
+          <option value="Duende Verde">Duende Verde</option>
+          <option value="Jocker">Jocker</option>
+        </optgroup>
+      </select>
+
+      <input type="color" name="inputColor" id="inputColor" />
+      <input type="file" name="inputFile" id="inputFile" />
+      <progress min="0" max="90" value="20" id="progress"></progress>
+      <input type="search" name="" id="" />
+      <div>
+        <label for="colors">Elige un color</label>
+        <input type="color" list="redColors" id="colors" />
+        <datalist id="redColors">
+          <option value="#800000"></option>
+          <option value="#8B0000"></option>
+          <option value="#A52A2A"></option>
+          <option value="#DC143C"></option>
+        </datalist>
+        <label for="flavours" >Elige un sabor</label>
+        <input type="text" name="flavours" id="flavours" list="dataFlavours">
+        <datalist id="dataFlavours" name="flavours">
+        <option value="Chocolate">Chocolate</option>
+          <option value="Vainilla">Vainilla</option>
+        </datalist>
+      </div>
+      <textarea name="" id="" cols="60" rows="20"></textarea>
+      <div>
+      <input type="button" value="BOTON">
+      <button type="submit" id="buttonSubmit">ENVIAR</button>
+      <button type="reset">RESETEA</button>
+      </div>
+    </form>
+    <!-- Si hacemos el proyecto con VITE se nos añadirá el script dentro del body sin defer -->
+    <!-- <script src="./app.js" ></script> -->
+  </body>
+</html>
