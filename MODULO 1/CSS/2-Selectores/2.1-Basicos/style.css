@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    border: 2px dotted blue;
+}
+
+.containerClase {
+    width: 500px;
+    height: 500px;
+    background-color: antiquewhite;
+}
+
+
+#containerId {
+    width: 600px;
+    height: 600px;
+    background-color: blueviolet;
+    border: 0;
+}
+
+div {
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    /* Este border va a pisar la propiedad que le dimos en la linea 8 */
+    border: 0;
+}
