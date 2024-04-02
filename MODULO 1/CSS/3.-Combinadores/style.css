@@ -1,0 +1,29 @@
+/* combinador de hermanos adyacentes */
+
+.adyacente:nth-child(2) + .adyacente{
+    color: red
+}
+
+/* se posiciona en el primero que ese tipo y coge el siguiente adyacente hijo del padre */
+.adyacente:first-of-type + .adyacente{
+    color:green
+}
+
+/* Virgulilla ~ Combinador general de hermanos: encuentra el primero que veas como un h4 y seleccioname todos los hermanos siguientes que sean un h4 */
+h4:first-of-type ~ p{
+    color:pink
+}
+
+/* combinadores de seleccionar los hijos -----> las dos formas siguientes hacen practicamente lo mismo */
+
+#alumnos > ul{
+    color:red 
+}
+
+
+/* combinador de descendientes afecta a todos los descendientes directos e indirectos */ 
+#alumnos  li{
+    color:aquamarine
+}
+
+
