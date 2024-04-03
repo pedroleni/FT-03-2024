@@ -1,0 +1,75 @@
+:root{
+    --primary-color: pink;
+    --padding: 1rem
+}
+
+h2{
+    padding: var(--padding)
+}
+
+input:invalid{
+    outline:none;
+    border: 1px red solid
+}
+
+ul li:only-child{
+    opacity: 0.5;
+}
+
+#idInput:required{
+    background-color: gold
+}
+
+
+input:read-write{
+    background-color: blue ;
+}
+
+.ranking > li:nth-child(3){
+    color:red 
+}
+
+.ranking > li:first-child{
+    color: blue
+}
+
+input:checked{
+    accent-color: yellow;
+}
+input:any-c{
+    accent-color: orange;
+}
+
+
+a:not(:any-link){
+    color:blueviolet
+}
+
+button:disabled{
+    background-color: aqua;
+}
+
+.btn:active{
+    background: blue;
+    color: white
+}
+
+.btn:hover{
+    background: pink;
+
+}
+
+a:visited{
+    color:aqua
+}
+
+
+
+
+
+
+
+
+
+
+
