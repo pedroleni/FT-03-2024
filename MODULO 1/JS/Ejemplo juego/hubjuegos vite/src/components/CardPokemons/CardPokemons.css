@@ -26,11 +26,15 @@
   }
 }
 
-.grass {
-  background-color: #63bb5b75;
+.buttonFilter.grass {
+  background-color: #63bb5b;
 }
 figure.grass {
   border: 10px solid #63bb5b;
+}
+
+ .grass {
+  background-color: #63bb5b54;
 }
 
 figure.bug {

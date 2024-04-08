@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gridContainer{
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 300px 300px 200px;
+    grid-template-rows: auto 200px  200px;
+    justify-content: center;
+
+    & div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
