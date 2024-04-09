@@ -28,7 +28,7 @@ const starGame = () => {
     setStateMemory("interval", setInterval(timeGenerator, 1000));
     Swal.fire({
       position: "center",
-      title: "SUERTEEE 😘",
+      title: "SUERTE 😘",
       imageUrl:
         "https://res.cloudinary.com/dq186ej4c/image/upload/v1712312456/WmP_nkjrov.gif",
       imageHeight: 300,
@@ -71,8 +71,6 @@ const init = () => {
   result.innerText = "";
   setStateMemory("winCount", 0);
   let cardValues = generateRandom();
-  console.log(cardValues);
-
   generador(cardValues);
 };
 

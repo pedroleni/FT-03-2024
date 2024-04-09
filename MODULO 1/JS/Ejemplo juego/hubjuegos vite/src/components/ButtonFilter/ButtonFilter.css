@@ -17,3 +17,84 @@
   align-items: center;
   opacity: 1;
 }
+
+
+
+.buttonFilter.grass {
+  background-color: #63bb5b;
+}
+
+
+.buttonFilter.bug {
+  background-color: #8fc12c;
+}
+
+
+.buttonFilter.dark {
+  background-color: #5a5366;
+}
+f
+.buttonFilter.dragon {
+  background-color: #0a6dc4;
+}
+fig
+.buttonFilter.electric {
+  background-color: #f3d13b;
+}
+
+
+.buttonFilter.fairy {
+  background-color: #ec8fe6;
+}
+fig
+.buttonFilter.fighting {
+  background-color: #ce4068;
+}
+
+.buttonFilter.fire {
+  background-color: #ff9b54;
+}
+
+f
+.buttonFilter.flying {
+  background-color: #8fa8dd;
+}
+
+.buttonFilter.ghost {
+  background-color: #5269ac;
+}
+
+f
+.buttonFilter.ground {
+  background-color: #d97746;
+}
+.buttonFilter.ice {
+  background-color: #74cec1;
+}
+f
+.buttonFilter.normal {
+  background-color: #9099a1;
+}
+
+f
+.buttonFilter.poison {
+  background-color: #aa6ac8;
+}
+
+fi
+.buttonFilter.psychic {
+  background-color: #f97176;
+}
+.buttonFilter.rock {
+  background-color: #c7b78b;
+}
+
+
+.buttonFilter.steel {
+  background-color: #5a8ea1;
+}
+
+.buttonFilter.water {
+  background-color: #4d91d5;
+}
+

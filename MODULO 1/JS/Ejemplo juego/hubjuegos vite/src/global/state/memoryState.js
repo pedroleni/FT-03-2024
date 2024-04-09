@@ -1,4 +1,4 @@
-const dataState = {
+let dataState = {
   seconds: 0,
   minutes: 0,
   movesCount: 0,
@@ -79,5 +79,20 @@ export const setStateMemory = (typeOfValue, setValue) => {
     case "stopGame":
       dataState.stopGame = setValue;
       break;
+
+    case "reset":
+      dataState = {
+        seconds: 0,
+        minutes: 0,
+        movesCount: 0,
+        winCount: 0,
+        cards: null,
+        interval: dataState.interval,
+        firstCard: false,
+        secondCard: false,
+        stopGame: null,
+        firstCardValue: null,
+        secondCardValue: null,
+      };
   }
 };

@@ -1,5 +1,5 @@
 import { initControler, initTemplate } from "./src/utils";
-import { PrintTemplateHeader } from "./src/components/Header/Header";
+
 import "./style.css";
 
 //! -----> renderizamos las etiquetas de la estructura inicial
@@ -9,7 +9,6 @@ import "./style.css";
  */
 
 initTemplate();
-PrintTemplateHeader();
 
 //! --------> lo ponemos sin parametro para que salte al caso de switch de undefined para evaluar el user
 /** no le metemos parametro en el initControler para que pueda asi

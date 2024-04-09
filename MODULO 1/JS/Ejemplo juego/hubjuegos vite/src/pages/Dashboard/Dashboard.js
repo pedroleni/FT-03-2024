@@ -1,5 +1,5 @@
 //Dashboard.js ------> src/pages/Dashboard/Dashboard.js
-import { getStateMemory } from "../../global/state/memoryState";
+import { getStateMemory, setStateMemory } from "../../global/state/memoryState";
 import { initControler } from "../../utils";
 import "./Dashboard.css";
 
@@ -53,6 +53,7 @@ const addEventListeners = () => {
 };
 
 export const printTemplateDashboard = () => {
+  setStateMemory("reset");
   clearInterval(getStateMemory("interval"));
   /** Como siempre las paginas se renderizan en el main por lo cual inyectamos el template en el contenedor del main */
   document.querySelector("main").innerHTML = template();
