@@ -33,6 +33,15 @@ const template = () => `
           <h2>MEMORY GAME</h2>
         </figure>
       </li>
+       <li>
+        <figure id="navigateAhorcado">
+          <img
+            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1712774409/kisspng-i-cannot-think-of-any-need-in-childhood-as-strong-5b1f4ffd488859.7575209315287787492971_gk8qn7.png"
+            alt="go to ahorcado game"
+          />
+          <h2>AHORCADO</h2>
+        </figure>
+      </li>
     </ul>
   </div>
 `;
@@ -49,6 +58,11 @@ const addEventListeners = () => {
   const navigateMemory = document.getElementById("navigateMemory");
   navigateMemory.addEventListener("click", () => {
     initControler("Memory");
+  });
+
+  const navigateAhorcado = document.getElementById("navigateAhorcado");
+  navigateAhorcado.addEventListener("click", () => {
+    initControler("Ahorcado");
   });
 };
 
