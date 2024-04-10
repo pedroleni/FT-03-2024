@@ -1,0 +1,78 @@
+img {
+    width: 70px;
+    height: 70px;
+    filter: invert(100%);
+    animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+h1 {
+    animation: fadeInOut 5s infinite;
+}
+
+@keyframes  fadeInOut{
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+ul {
+    animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: cadetblue;
+    animation: leftToRight 10s infinite linear;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(0);
+        background-color: red;
+    }
+
+    50% {
+        transform: translateX(400px);
+        background-color: blueviolet;
+    }
+
+    100% {
+        transform: translateX(800px);
+        background-color: aqua;
+    }
+}

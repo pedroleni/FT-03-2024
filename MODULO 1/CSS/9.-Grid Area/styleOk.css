@@ -85,7 +85,9 @@ header{
         flex-direction: row;
        
     justify-content: space-between;
-    gap:3rem
+    gap:3rem;
+    COLOR: rgba(30, 4, 4, 0.595)
+    
 
     }
 }

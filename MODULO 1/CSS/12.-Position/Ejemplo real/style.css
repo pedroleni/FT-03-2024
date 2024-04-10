@@ -1,0 +1,42 @@
+img{
+    width: 70vw ;
+    border-radius: 10px;
+    
+}
+
+p{
+    width: 300px;
+    background-color: azure;
+    text-align: justify;
+    position: absolute;
+    padding: 1rem;
+    left: 600px;
+    top: 50px;
+    border: #FEB94C solid 3px;
+     border-radius: 10px;
+}
+
+figure{
+    position: relative;
+    
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 420px){
+    img{
+        width: 95vw;
+    }
+
+    p{
+        left: 18px;
+        top: 185px
+    }
+
+}
