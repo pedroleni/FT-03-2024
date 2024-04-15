@@ -13,6 +13,11 @@ dotenv.config();
 //! ----------------------------------------------------------
 connect();
 
+//! ----------------------------------------------------------
+//?- ------------------- configurar cloudinary ----------------
+//! ----------------------------------------------------------
+const { configCloudinary } = require("./src/middleware/files.middleware");
+configCloudinary();
 //! -----------------VARIABLES CONSTANTES --> PORT
 
 const PORT = process.env.PORT;
@@ -27,6 +32,9 @@ app.use(cors());
 //! ----------------- ----------------------------------------
 //? -----------------ROUTAS ---------------------------------
 //! ----------------- ----------------------------------------
+const UserRoutes = require("./src/api/routes/User.routes");
+
+app.use("/api/v1/users/", UserRoutes);
 
 //! --------------------------------------------------------------
 //? ------------------ limitaciones de cantidad en el back end-----
