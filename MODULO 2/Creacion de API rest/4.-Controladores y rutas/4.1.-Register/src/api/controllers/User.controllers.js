@@ -73,22 +73,26 @@ const registerLargo = async (req, res, next) => {
             text: `tu codigo es ${confirmationCode}, gracias por confiar en nosotros ${name}`,
           };
 
-          transporter.sendMail(mailOptions, (error, info) => {
+          transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
               console.log(error);
               return res.status(404).json({
                 user: userSave,
                 confirmationCode: "error, resend code",
               });
-            } else {
-              return res
-                .status(201)
-                .json({ user: createdUser, confirmation: confirmationCode });
             }
+            console.log("Email sent: " + info.response);
+            return res.status(200).json({
+              user: userSave,
+              confirmationCode,
+            });
           });
         } else {
+          return res.status(404).json("error save user");
         }
-      } catch (error) {}
+      } catch (error) {
+        return res.status(404).json(error.message);
+      }
     } else {
       if (req.file) deleteImgCloudinary(catchImg);
       return res.status(409).json("this user already exist");
