@@ -14,7 +14,7 @@ dotenv.config();
 const User = require("../models/User.model");
 
 //! -----------------------------------------------------------------------
-//? ------------------------------utils - middlewares----------------------
+//? ------------------------utils - middlewares - states ------------------
 //! -----------------------------------------------------------------------
 const { deleteImgCloudinary } = require("../../middleware/files.middleware");
 const randomCode = require("../../utils/randomCode");
@@ -33,6 +33,7 @@ const setError = require("../../helpers/handle-error");
 //! -----------------------------------------------------------------------------
 //? ----------------------------REGISTER LARGO EN CODIGO ------------------------
 //! -----------------------------------------------------------------------------
+
 const registerLargo = async (req, res, next) => {
   // capturamos la imagen nueva subida a cloudinary
   let catchImg = req.file?.path;
@@ -287,9 +288,56 @@ const sendMailRedirect = async (req, res, next) => {
   }
 };
 
+const resendCode = async (req, res, next) => {
+  console.log("body", req);
+  try {
+    //! vamos a configurar nodemailer porque tenemos que enviar un codigo
+    const email = process.env.EMAIL;
+    const password = process.env.PASSWORD;
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: email,
+        pass: password,
+      },
+    });
+
+    //! hay que ver que el usuario exista porque si no existe no tiene sentido hacer ninguna verificacion
+    const userExists = await User.findOne({ email: req.body?.email });
+
+    if (userExists) {
+      const mailOptions = {
+        from: email,
+        to: req.body?.email,
+        subject: "Confirmation code",
+        text: `tu codigo es ${userExists.confirmationCode}`,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+          return res.status(404).json({
+            resend: false,
+          });
+        } else {
+          console.log("Email sent: " + info.response);
+          return res.status(200).json({
+            resend: true,
+          });
+        }
+      });
+    } else {
+      return res.status(404).json("User not found");
+    }
+  } catch (error) {
+    return next(setError(500, error.message || "Error general send code"));
+  }
+};
+
 module.exports = {
   registerLargo,
   registerUtil,
   registerWithRedirect,
   sendMailRedirect,
+  resendCode,
 };

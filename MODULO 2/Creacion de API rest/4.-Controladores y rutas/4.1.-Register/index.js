@@ -29,18 +29,18 @@ const cors = require("cors");
 
 app.use(cors());
 
+//! --------------------------------------------------------------
+//? ------------------ limitaciones de cantidad en el back end-----
+//! ---------------------------------------------------------------
+app.use(express.json({ limit: "5mb" }));
+app.use(express.urlencoded({ limit: "5mb", extended: false }));
+
 //! ----------------- ----------------------------------------
 //? -----------------ROUTAS ---------------------------------
 //! ----------------- ----------------------------------------
 const UserRoutes = require("./src/api/routes/User.routes");
 
 app.use("/api/v1/users/", UserRoutes);
-
-//! --------------------------------------------------------------
-//? ------------------ limitaciones de cantidad en el back end-----
-//! ---------------------------------------------------------------
-app.use(express.json({ limit: "5mb" }));
-app.use(express.urlencoded({ limit: "5mb", extended: false }));
 
 //! ----------------------------------------------------------
 //? -----------------  ERRORES GENERALES Y RUTA NO ENCONTRADA
