@@ -8,6 +8,8 @@ const {
   sendMailRedirect,
   resendCode,
   checkNewUser,
+  login,
+  autoLogin,
 } = require("../controllers/User.controllers");
 const { upload } = require("../../middleware/files.middleware");
 
@@ -19,6 +21,8 @@ UserRoutes.post("/registerLargo", upload.single("image"), registerLargo);
 UserRoutes.post("/registerUtil", upload.single("image"), registerUtil);
 UserRoutes.post("/resend", resendCode);
 UserRoutes.post("/check", checkNewUser);
+UserRoutes.post("/login", login);
+UserRoutes.post("/login/autologin", autoLogin);
 
 //!------------------------------------------------------------------------
 //?--------------------------------RUTAS CON REDIRECT----------------------
