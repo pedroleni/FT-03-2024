@@ -846,7 +846,7 @@ const byId = async (req, res, next) => {
 const getAll = async (req, res, next) => {
   try {
     const getAllUser = await User.find(); // esto devuelve un array
-    if (getAll.length === 0) {
+    if (getAllUser.length === 0) {
       return res.status(404).json("no encontrados");
     } else return res.status(200).json({ data: getAllUser });
   } catch (error) {
