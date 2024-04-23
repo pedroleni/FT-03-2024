@@ -48,8 +48,8 @@ const UserSchema = new mongoose.Schema(
     },
     moviesFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "Movie" }],
     charactersFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "Character" }],
-    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
-    followed: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }], // seguidores
+    followed: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }], // seguidosº
     chats: [{ type: mongoose.Schema.Types.ObjectId, ref: "Chat" }],
     banned: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     commentsPublicByOther: [
