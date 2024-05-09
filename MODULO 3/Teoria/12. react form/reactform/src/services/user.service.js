@@ -10,6 +10,7 @@ export const registerUser = async(formData) => {
     .catch((error) => error)
 }
 
+
 //! -------- BORRADO DEL USUARIO --- //
 // ejemplo servicio user con autenticacion
 

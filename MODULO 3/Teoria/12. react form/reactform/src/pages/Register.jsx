@@ -39,14 +39,17 @@ export const Register = () => {
     //! 4) useEffects que gestionan la repuesta y manejan los errores
     useEffect(() => {
         // aqui voy a llamar a un customHook para gestionar los errores
-        useErrorRegister()
-
+        useErrorRegister(res, setRes, setOk);
         console.log('res', res);
-        console.log('send', send);
-      }, [res, send])
+    }, [res])
     
 
     //! 5) estados de navegacion
+    // estados ok -- falta
+    if (ok) {
+        // navega a dashboard
+        console.log('Estás registrado 😀');
+    }
 
     return (
     <>
